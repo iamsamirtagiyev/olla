@@ -1,0 +1,187 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: all 0.5s ease;
+  font-family: "Poppins", sans-serif;
+}
+
+button {
+  font-size: 18px;
+  padding: 10px 20px;
+  background: #2093ff;
+  color: #fff;
+  font-weight: 500;
+  border-radius: 8px;
+}
+button:hover {
+  background: #0084ff;
+}
+button:active {
+  transform: scale(0.95);
+}
+
+button, input {
+  border: none;
+  outline: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 30px;
+  margin: 0 auto;
+}
+
+.cards {
+  padding: 50px 0;
+}
+.cards .add-btn {
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+  font-size: 25px;
+}
+.cards .cards-wrapper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 30px;
+}
+.cards .cards-wrapper .alert-success {
+  position: fixed;
+  top: 30px;
+  right: 30px;
+  color: green;
+  text-transform: capitalize;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 10px 20px;
+  max-width: 500px;
+  background: #fff;
+  gap: 10px;
+  border: solid 3px rgba(0, 255, 0, 0.5);
+  border-radius: 8px;
+  overflow: hidden;
+}
+.cards .cards-wrapper .alert-success i {
+  font-size: 30px;
+}
+.cards .cards-wrapper .alert-success span {
+  font-size: 20px;
+  font-weight: 500;
+}
+.cards .cards-wrapper .alert-success::after {
+  z-index: -1;
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 255, 0, 0.3);
+  top: 0;
+  left: 0;
+}
+.cards .cards-wrapper .title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  gap: 10px;
+}
+.cards .cards-wrapper .title h1 {
+  font-size: 40px;
+  font-weight: 500;
+}
+.cards .cards-wrapper .title span {
+  color: gray;
+  font-size: 20px;
+}
+.cards .cards-wrapper .load-more {
+  display: none;
+}
+.cards .cards-wrapper .load {
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+}
+.cards .cards-wrapper .card-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 20px;
+  gap: 20px;
+}
+.cards .cards-wrapper .card-list .card {
+  position: relative;
+  background: rgba(0, 136, 248, 0.1);
+  height: 450px;
+  overflow: hidden;
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  text-align: center;
+}
+.cards .cards-wrapper .card-list .card h1 {
+  font-weight: 500;
+}
+.cards .cards-wrapper .card-list .card p {
+  font-size: 20px;
+  color: gray;
+}
+.cards .cards-wrapper .card-list .card .buttons {
+  width: 100%;
+}
+.cards .cards-wrapper .card-list .card .buttons button {
+  width: 100%;
+}
+.cards .cards-wrapper .card-list .card .buttons .top {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+.cards .cards-wrapper .card-list .card::after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 136, 248, 0.15);
+  top: 500px;
+  left: 0;
+  transition: all 0.5s ease;
+}
+.cards .cards-wrapper .card-list .card:hover::after {
+  top: 0;
+}
+
+@media (max-width: 991px) {
+  .cards .cards-wrapper .title h1 {
+    font-size: 30px;
+  }
+  .cards .cards-wrapper .title span {
+    font-size: 15px;
+  }
+  .cards .cards-wrapper .card-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 575px) {
+  .cards .cards-wrapper .card-list {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+}/*# sourceMappingURL=style.css.map */
